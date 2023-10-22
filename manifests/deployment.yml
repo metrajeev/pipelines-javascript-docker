@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: metrajeevpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: metrajeevpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: metrajeevpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: metrajeevpipelinesjavascriptdocker 
+          image: rkscontainerregistry.azurecr.io/metrajeevpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
